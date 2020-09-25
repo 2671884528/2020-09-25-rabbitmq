@@ -20,7 +20,7 @@ public class Custom1 {
             Connection conn = ConnectionUtils.getConnection();
 
             Channel channel = conn.createChannel();
-            //通道绑定交换机
+            //声明交换机
             channel.exchangeDeclare("logs", "fanout");
             //绑定交换机和队列
             String queue = channel.queueDeclare().getQueue();
